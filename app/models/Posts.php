@@ -67,6 +67,8 @@ class Posts extends \Phalcon\Mvc\Model
     public function initialize()
     {
         $this->setSchema("phalcon_project");
+        $this->belongsTo("user_id", "Users", "id"); 
+        $this->belongsTo("category_id", "Categories", "id");
     }
 
     /**

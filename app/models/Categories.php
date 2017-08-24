@@ -53,6 +53,7 @@ class Categories extends \Phalcon\Mvc\Model
     public function initialize()
     {
         $this->setSchema("phalcon_project");
+        $this->hasMany("id", "Posts", "category_id"); 
     }
 
     /**
